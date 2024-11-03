@@ -1,4 +1,4 @@
-# Moderator Tracking Dashboard (MTD)
+# React-Vite Google Apps Script Boilerplate
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -6,7 +6,8 @@
 ![Vite](https://img.shields.io/badge/Vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+![React Bootstrap](https://img.shields.io/badge/React_Bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Bootswatch](https://img.shields.io/badge/Bootswatch-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Google Spreadsheet](https://img.shields.io/badge/Google%20Sheet-4285F4?style=for-the-badge&logo=googlesheet&logoColor=white)
 ![Google AppsScript](https://img.shields.io/badge/Google%20AppsScript-4285F4?style=for-the-badge&logo=googleappsscript&logoColor=white)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
@@ -74,7 +75,8 @@ This boilerplate project provides a foundation to build a React web application 
       ```bash
       npm run create
       ```
-      or 
+      or, to specify a custom title and root directory:
+
       ```bash
       npm run create -- --title "Custom Project Title" --rootDir "./dist"
       ```
@@ -110,7 +112,7 @@ This boilerplate project provides a foundation to build a React web application 
    npm run json-server
    ```
 
-   JSON Server will start at `http://localhost:3001`, and you can adjust data in `data/db.json` for testing.
+   JSON Server will start at `http://localhost:3001`, and you can adjust data in `data/db.json` for testing. See the section [using JSON Server for Local Development](#using-json-server-for-local-development) on how to create a local database in `data/db.json`.
 
 ## Theme Customization
 
@@ -144,7 +146,7 @@ Run the server with:
 npm run json-server
 ```
 
-You can then access the mock API at `http://localhost:3001/users` or `http://localhost:3001/tasks`.
+You can then access the mock API at `http://localhost:3001/getData` or `http://localhost:3001/getUserInfo`.
 
 
 ## Build Date with `setBuildDate` Script
@@ -162,6 +164,11 @@ The `set-build-date` script automatically sets the current build date and time i
 The `setBuildDate` script is run automatically before each build through the `prebuild` script in `package.json`. This setup ensures that the build date is always up-to-date before deployment.
 
 ## Deployment
+
+### Important Checks
+
+- `public` Directory: This directory must contain `appsscript.json`, which defines the Apps Script configuration. Additionally, any JavaScript files that interact with Google Sheets (e.g., `doGet.js` for serving the frontend, `getData.js` for fetching data) should be stored here.
+
 
 1. **Build for Google Apps Script**:
    ```bash

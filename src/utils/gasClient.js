@@ -9,7 +9,10 @@ const callServerFunction = async (functionName, params = []) => {
     if (process.env.NODE_ENV === 'development') {
         // Local development: Use json-server API
         const response = await fetch(`http://localhost:3001/${functionName}`);
-        return response.json();
+        if (!response.ok) {
+            throw new Error(`Failed to fetch from local JSON server: ${response.statusText}`);
+        }
+        return await response.json();
     } else {
         // Production: Use GAS server function
         return serverFunctions[functionName](...params);

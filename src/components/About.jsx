@@ -10,10 +10,18 @@ const breadcrumbItems = [
 
 function About(props) {
     const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Replace 'getData' with the actual GAS function name or JSON key in db.json
-        callServerFunction('getData').then((response) => setData(response));
+        callServerFunction('getData')
+            .then(response => {
+                if (response.error) {
+                    setError(response.error); // Set error message
+                } else {
+                    setData(response); // Set fetched data
+                }
+            })
+            .catch(err => setError(`Unexpected error: ${err.message}`));
     }, []);
 
     return (
@@ -23,8 +31,8 @@ function About(props) {
                 <Container className="p-5 mb-4 bg-light rounded-3">
                     <h1 className="header">About</h1>
                     <div>
-                        <h1>Data from Server</h1>
-                        <pre>{JSON.stringify(data, null, 2)}</pre>
+                        <h4>Data from Server</h4>
+                        {error ? <p style={{ color: 'red' }}>{error}</p> : <pre>{JSON.stringify(data, null, 2)}</pre>}
                     </div>
                 </Container>
 

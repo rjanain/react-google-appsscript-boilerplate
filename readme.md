@@ -17,6 +17,7 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Theme Customization](#theme-customization)
 - [Using JSON Server for Local Development](#using-json-server-for-local-development)
@@ -36,6 +37,30 @@ This boilerplate project provides a foundation to build a React web application 
 - **Google Apps Script Integration**: Backend communication with Google Sheets and other Google services.
 - **JSON Server**: Mock backend API for local development.
 - **Optimized Builds**: Single-file output using Vite for seamless Google Apps Script deployment.
+
+## Screenshots
+
+Here are some screenshots demonstrating the application in action:
+
+### Homepage and About
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="screenshots/1.png" alt="Homepage" width="45%">
+  <img src="screenshots/2.png" alt="Dashboard" width="45%">
+</div>
+
+
+### Various Themes
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="screenshots/3.png" alt="Settings Page" width="45%">
+  <img src="screenshots/4.png" alt="Theme 1" width="45%">
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <img src="screenshots/5.png" alt="Theme 2" width="30%">
+  <img src="screenshots/6.png" alt="Theme 3" width="30%">
+  <img src="screenshots/7.png" alt="Theme 3" width="30%">
+</div>
 
 ## Installation
 

@@ -1,0 +1,66 @@
+/* Breadcrumb Styles */
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px; /* Adjust based on layout */
+    list-style: none;
+    background-color: transparent; /* Clear background */
+    border-radius: 0.25rem;
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">"; /* Custom separator */
+    color: var(--bs-warning); /* Soft, adaptable color */
+    padding: 0 5px;
+}
+
+.breadcrumb-item a {
+    color: var(--bs-primary); /* Adaptable primary link color */
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--bs-primary-dark, #0056b3); /* Darker blue for better contrast on hover */
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--bs-primary); /* Soft color for active item */
+    font-weight: bold; /* Highlight the current page */
+}
+
+/* Custom styles for SweetAlert2 notifications */
+.swal2-toast.swal2-top-end {
+    top: 1em;
+    right: 1em;
+    border-radius: 8px;
+    background-color: var(--bs-light, #f0f0f0); /* Light background for notifications */
+    color: var(--bs-dark, #333); /* Dark text color for readability */
+}
+
+.swal2-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.swal2-timer-progress-bar {
+    background-color: var(--bs-success, #76c7c0); /* Progress bar color */
+}
+
+
+/* Theme Dropdown Styling */
+.dropdown-menu.show[aria-labelledby="themes"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px; /* Adjust width as needed */
+}
+
+.dropdown-menu.show[aria-labelledby="themes"] .dropdown-item {
+    width: 33.333333%;
+    text-align: center; /* Optional for better alignment */
+}
+
+.dropdown-menu.show[aria-labelledby="themes"] .dropdown-item:first-child {
+    width: 100%;
+}

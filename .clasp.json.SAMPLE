@@ -1,0 +1,5 @@
+{
+    "scriptId": "...add scriptId here...",
+    "rootDir": "./dist",
+    "parentId": ["...spreadsheet/doc url ID here..."]
+}

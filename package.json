@@ -20,25 +20,14 @@
     "push": "clasp push --watch"
   },
   "dependencies": {
-    "@sgratzl/chartjs-chart-boxplot": "^4.3.1",
-    "chart.js": "^4.3.0",
-    "chartjs-adapter-date-fns": "^3.0.0",
-    "chartjs-chart-matrix": "^2.0.1",
-    "chartjs-plugin-datalabels": "^2.2.0",
     "date-fns": "^3.6.0",
     "react": "^18.2.0",
-    "react-chartjs-2": "^5.2.0",
-    "react-data-table-component": "^7.6.2",
     "react-dom": "^18.2.0",
-    "react-gauge-chart": "^0.5.1",
-    "react-icons": "^4.9.0",
     "react-router-dom": "^6.3.0",
-    "styled-components": "^6.1.9",
-    "sweetalert2": "^11.6.13"
+    "sweetalert2": "^11.14.4"
   },
   "devDependencies": {
     "@google/clasp": "^2.4.1",
-    "@parcel/transformer-sass": "^2.7.0",
     "@types/google-apps-script": "^1.0.55",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -46,9 +35,9 @@
     "gas-client": "^1.1.1",
     "gas-lib": "^2.0.4",
     "gas-types-detailed": "^1.1.1",
-    "google-apps-script-webpack-dev-server": "^1.0.0",
     "json-server": "^1.0.0-beta.0",
     "react-bootstrap": "^2.5.0",
+    "react-icons": "^5.3.0",
     "rimraf": "^3.0.2",
     "vite": "^5.2.11",
     "vite-plugin-singlefile": "^2.0.1"
